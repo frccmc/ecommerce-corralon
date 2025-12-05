@@ -1,0 +1,21 @@
+INSERT INTO producto (nombre, precio, categoria) VALUES ('Cemento Portland', 3500, 'Cementos y Cal');
+INSERT INTO producto (nombre, precio, categoria) VALUES ('Arena fina', 1200, 'Aridos');
+INSERT INTO producto (nombre, precio, categoria) VALUES ('Arena gruesa', 1500, 'Aridos');
+INSERT INTO producto (nombre, precio, categoria) VALUES ('Piedra partida', 2800, 'Aridos');
+INSERT INTO producto (nombre, precio, categoria) VALUES ('Cal hidráulica', 2200, 'Cementos y Cal');
+INSERT INTO producto (nombre, precio, categoria) VALUES ('Hierro del 8 mm', 900, 'Metales');
+INSERT INTO producto (nombre, precio, categoria) VALUES ('Hierro del 10 mm', 1500, 'Metales');
+INSERT INTO producto (nombre, precio, categoria) VALUES ('Yeso en polvo', 1800, 'Yeso y Revoques');
+INSERT INTO producto (nombre, precio, categoria) VALUES ('Malla sima', 5200, 'Metales');
+INSERT INTO producto (nombre, precio, categoria) VALUES ('Ladrillo hueco 12x18x33 cm', 500, 'Ladrillos');
+INSERT INTO producto (nombre, precio, categoria) VALUES ('Ladrillo hueco 8x18x33 cm', 380, 'Ladrillos');
+INSERT INTO producto (nombre, precio, categoria) VALUES ('Ladrillo hueco 18x18x33 cm', 650, 'Ladrillos');
+INSERT INTO producto (nombre, precio, categoria) VALUES ('Ladrillo común cerámico 5x15x25 cm', 150, 'Ladrillos');
+INSERT INTO producto (nombre, precio, categoria) VALUES ('Bloque de hormigón 15x20x40 cm', 820, 'Ladrillos');
+INSERT INTO producto (nombre, precio, categoria) VALUES ('Ladrillo portante Retak 20x30x60 cm', 2100, 'Ladrillos');
+INSERT INTO producto (nombre, precio, categoria) VALUES ('Perfil montante 70 mm x 35 mm x 0.9 mm', 4500, 'Perfiles Steel Frame');
+INSERT INTO producto (nombre, precio, categoria) VALUES ('Perfil solera 70 mm x 35 mm x 0.9 mm', 3900, 'Perfiles Steel Frame');
+INSERT INTO producto (nombre, precio, categoria) VALUES ('Perfil montante 90 mm x 38 mm x 0.9 mm', 5600, 'Perfiles Steel Frame');
+INSERT INTO producto (nombre, precio, categoria) VALUES ('Perfil solera 90 mm x 38 mm x 0.9 mm', 4800, 'Perfiles Steel Frame');
+INSERT INTO producto (nombre, precio, categoria) VALUES ('Perfil canal C 100 mm x 50 mm x 1.6 mm', 8200, 'Perfiles Steel Frame');
+
