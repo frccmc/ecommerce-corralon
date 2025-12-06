@@ -36,11 +36,11 @@ public class ProductController {
     return this.service.buscarProductos(nombre, precio);
   };
 
-  //Editar nombre y/o precio
+  //Editar nombre y/o precio y/o categoria
   @PutMapping("/{id}")
   public Producto editarProducto(@PathVariable Long id, @RequestParam(required = false, defaultValue = "") String nombre,
-      @RequestParam(required = false, defaultValue = "0") Double precio){
-    return this.service.editarProducto(id, nombre, precio);
+      @RequestParam(required = false, defaultValue = "0") Double precio, @RequestParam(required = false, defaultValue = "") String categoria){
+    return this.service.editarProducto(id, nombre, precio, categoria);
   };
 
   @DeleteMapping("/{id}")

@@ -31,12 +31,13 @@ public class ProductServiceJPA implements ProductService {
     }
     return this.productoRepository.findAll();
   }
-  public Producto editarProducto(Long id, String nuevoNombre, Double nuevoPrecio) {
+  public Producto editarProducto(Long id, String nuevoNombre, Double nuevoPrecio, String nuevaCategoria) {
     Producto producto = this.productoRepository.findById(id)
         .orElseThrow(() -> new RuntimeException("Producto no encontrado"));
-    if(!nuevoNombre.isEmpty() && nuevoPrecio > 0){
+    if(!nuevoNombre.isEmpty() && nuevoPrecio > 0 && !nuevaCategoria.isEmpty()){
       producto.setNombre(nuevoNombre);
       producto.setPrecio(nuevoPrecio);
+      producto.setCategoria(nuevaCategoria);
       this.productoRepository.save(producto);
       return producto;
     } else if (!nuevoNombre.isEmpty()) {
@@ -47,7 +48,12 @@ public class ProductServiceJPA implements ProductService {
       producto.setPrecio(nuevoPrecio);
       this.productoRepository.save(producto);
       return producto;
+    } else if (!nuevaCategoria.isEmpty()) {
+      producto.setCategoria(nuevaCategoria);
+      this.productoRepository.save(producto);
+      return producto;
     }
+
     return producto;
   }
   public Producto borrarProducto(Long id) {

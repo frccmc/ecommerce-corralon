@@ -9,6 +9,6 @@ public interface ProductService {
 
   public Producto agregarProducto (Producto producto);
   public List<Producto> buscarProductos(String nombre, Double precio);
-  public Producto editarProducto(Long id, String nuevoNombre, Double nuevoPrecio);
+  public Producto editarProducto(Long id, String nuevoNombre, Double nuevoPrecio, String categoria);
   public Producto borrarProducto(Long id);
 }
