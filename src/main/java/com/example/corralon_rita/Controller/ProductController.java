@@ -28,12 +28,14 @@ public class ProductController {
     return this.service.agregarProducto(producto); //el service crea un producto y se lo retorno al cliente (ver service)
   }
 
+  //Buscar por nombre y/o precio y/o categoria
   @GetMapping
-  public List<Producto> buscarPorNombreYPrecio(
+  public List<Producto> buscarProducto(
       @RequestParam(required = false, defaultValue = "") String nombre,
-      @RequestParam(required = false, defaultValue = "0") Double precio)
+      @RequestParam(required = false, defaultValue = "0") Double precio,
+      @RequestParam(required = false, defaultValue = "") String categoria)
   {
-    return this.service.buscarProductos(nombre, precio);
+    return this.service.buscarProductos(nombre, precio, categoria);
   };
 
   //Editar nombre y/o precio y/o categoria

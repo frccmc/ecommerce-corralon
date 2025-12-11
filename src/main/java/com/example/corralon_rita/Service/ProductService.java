@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 public interface ProductService {
 
   public Producto agregarProducto (Producto producto);
-  public List<Producto> buscarProductos(String nombre, Double precio);
+  public List<Producto> buscarProductos(String nombre, Double precio, String categoria);
   public Producto editarProducto(Long id, String nuevoNombre, Double nuevoPrecio, String categoria);
   public Producto borrarProducto(Long id);
 }

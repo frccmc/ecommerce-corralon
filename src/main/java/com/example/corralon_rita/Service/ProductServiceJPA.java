@@ -19,15 +19,18 @@ public class ProductServiceJPA implements ProductService {
     System.out.println("Creando producto");
     return this.productoRepository.save(producto);
   }
-  public List<Producto> buscarProductos(String nombre, Double precio){ //para usar 3 o mas filtros buscar otra manera
-    if (!nombre.isEmpty() && precio > 0){
-      return this.productoRepository.findByNombreContainingAndPrecioLessThanEqual(nombre, precio);
+  public List<Producto> buscarProductos(String nombre, Double precio, String categoria){
+    if (!nombre.isEmpty() && precio > 0 && !categoria.isEmpty()){
+      return this.productoRepository.findByNombreContainingAndPrecioLessThanEqualAndCategoriaContaining(nombre, precio, categoria);
     }
     if (!nombre.isEmpty()) {
       return this.productoRepository.findByNombreContaining(nombre);
     }
     if(precio > 0){
       return this.productoRepository.findByPrecioLessThanEqual(precio);
+    }
+    if(!categoria.isEmpty()){
+      return this.productoRepository.findByCategoriaContaining(categoria);
     }
     return this.productoRepository.findAll();
   }
